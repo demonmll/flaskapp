@@ -4,6 +4,7 @@ from flask import Flask
 from flask import render_template
 import datetime
 import os,sys
+import random
 
 app = Flask(__name__)
 
@@ -14,8 +15,10 @@ def hello_world():
 
 
 
-@app.route('/<id>')
-def choose(id):
+@app.route('/choose/')
+def choose():
+
+    id = random.randint(0 , 100)
 
     err = 0 #错误标志
 

@@ -1,0 +1,25 @@
+[uwsgi]
+
+app = flaskapp
+module = %(app)
+callable = app
+
+master = true
+socket = 127.0.0.1:8888
+
+# protocol = http
+
+
+
+    server {
+      listen  80;
+      server_name 193.112.106.234; #公网地址
+
+      location / {
+        include      uwsgi_params;
+        uwsgi_pass   127.0.0.1:8888;  # 指向uwsgi 所应用的内部地址,所有请求将转发给uwsgi 处理
+
+      }
+    }
+
+
