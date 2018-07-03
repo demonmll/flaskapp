@@ -67,13 +67,13 @@ def choose():
     #选择地点
     third_line_id = int(third_line_id)
     if (third_line_id >= 0 and third_line_id <20 ):
-        area = u'外卖'
-    elif (third_line_id >= 20 and third_line_id <40 ):
         area = u'西门'
-    elif (third_line_id >= 40 and third_line_id <60 ):
+    elif (third_line_id >= 20 and third_line_id <40 ):
         area = u'北门'
-    elif (third_line_id >= 60 and third_line_id <80 ):
+    elif (third_line_id >= 40 and third_line_id <60 ):
         area = u'小铺'
+    elif (third_line_id >= 60 and third_line_id <80 ):
+        area = u'外卖'
     elif (third_line_id >= 60 and third_line_id <=100 ):
         area = u'学府'
 
