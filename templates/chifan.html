@@ -1,11 +1,29 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>吃饭地点</title>
 </head>
 
 
+<body>
+
+<script>
+
+    function getRandom() {
+    var length = 100;
+    var num = parseInt(Math.random() * (length));
+    return num;
+}
+
+function copyText() {
+    var suijishu = getRandom();
+    var url =  '193.112.106.234:5000/' + suijishu
+    self.location = url;
+}
+
+</script>
 
 
 <p>
@@ -37,18 +55,4 @@
 </html>
 
 
-<script>
 
-    function getRandom() {
-    var length = 100;
-    var num = parseInt(Math.random() * (length));
-    return num;
-}
-
-function copyText() {
-    var suijishu = getRandom();
-    var url =  '193.112.106.234:5000/' + suijishu
-    window.location.href = url;
-}
-
-</script>
