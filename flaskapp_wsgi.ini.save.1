@@ -1,0 +1,13 @@
+[uwsgi]
+base = /home/ubuntu/flaskapp
+
+app = flaskapp
+module = %(app)
+callable = app
+
+master = true
+processes = 
+4
+
+
+socket = /home/ubuntu/flaskapp/flaskapp.sock
