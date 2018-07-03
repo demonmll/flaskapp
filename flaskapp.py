@@ -52,7 +52,7 @@ def choose():
 
 
     # 更新数据
-    if ((now_addtime - second_line_addtime) > 1 and err == 0 ):
+    if ((now_addtime - second_line_addtime) > 5 and err == 0 ):
         first_line_day = day
         second_line_addtime = now_addtime
         third_line_id = id
