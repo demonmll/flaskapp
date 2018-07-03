@@ -42,7 +42,7 @@ def choose(id):
         temp = int(id)
     except:
         err = 1
-        print ('done')
+        print 'done'
 
 
 
