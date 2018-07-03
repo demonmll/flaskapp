@@ -1,4 +1,9 @@
 from flask import Flask
+<<<<<<< .mine
+
+=======
+
+>>>>>>> .theirs
 from flask import render_template
 import datetime
 import os,sys
