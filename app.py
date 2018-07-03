@@ -1,4 +1,6 @@
-﻿from flask import Flask
+﻿# -*- coding: utf-8 -*-
+
+from flask import Flask
 from flask import render_template
 import datetime
 import os,sys
@@ -62,15 +64,15 @@ def choose(id):
     #选择地点
     third_line_id = int(third_line_id)
     if (third_line_id >= 0 and third_line_id <20 ):
-        area = '外卖'
+        area = u'外卖'
     elif (third_line_id >= 20 and third_line_id <40 ):
-        area = '西门'
+        area = u'西门'
     elif (third_line_id >= 40 and third_line_id <60 ):
-        area = '北门'
+        area = u'北门'
     elif (third_line_id >= 60 and third_line_id <80 ):
-        area = '小铺'
+        area = u'小铺'
     elif (third_line_id >= 60 and third_line_id <=100 ):
-        area = '学府'
+        area = u'学府'
 
 
     #显示时间
