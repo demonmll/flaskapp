@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>吃饭地点</title>
+</head>
+
+
+
+
+<p>
+<button onclick="copyText()">生成1-100随机数</button>
+</p>
+
+
+<p>
+<details class="menu" open>
+      <summary>规则</summary>
+      <ul>
+
+          <li>1-20 西门</li>
+          <li>20-40 北门</li>
+          <li>40-60 小铺</li>
+          <li>60-80 外卖</li>
+          <li>80-100 东门</li>
+
+      </ul>
+</details>
+
+</p>
+
+
+
+
+
+</body>
+</html>
+
+
+<script>
+
+    function getRandom() {
+    var length = 100;
+    var num = parseInt(Math.random() * (length));
+    return num;
+}
+
+function copyText() {
+    var suijishu = getRandom();
+    var url =  'http://127.0.0.1:5000/' + suijishu
+    window.location.href = url;
+}
+
+</script>
