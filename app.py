@@ -1,6 +1,7 @@
-﻿from flask import Flask
+from flask import Flask
 from flask import render_template
 import datetime
+import os,sys
 
 app = Flask(__name__)
 
@@ -17,7 +18,7 @@ def choose(id):
     err = 0 #错误标志
 
     #读取文件内容
-    f = open('test.txt', 'r')
+    f = open(os.path.dirname(os.path.realpath(__file__)) + '\\test.txt', 'r')
     first_line_day = int(f.readline())
     second_line_addtime = int(f.readline()) #分钟和时间的总和
     third_line_id = int(f.readline())
@@ -51,7 +52,7 @@ def choose(id):
         second_line_addtime = now_addtime
         third_line_id = id
 
-        f2 = open('test.txt', 'w')
+        f2 = open(os.path.dirname(os.path.realpath(__file__)) + '\\test.txt', 'w')
         f2.writelines(str(first_line_day) + '\n')
         f2.writelines(str(second_line_addtime) + '\n')
         f2.writelines(str(third_line_id))
